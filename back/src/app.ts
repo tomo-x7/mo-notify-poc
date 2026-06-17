@@ -9,7 +9,6 @@ const validator = <T>() =>
 		return value as T;
 	});
 const channelTokens = new Map<string, { token: Promise<string>; timer: NodeJS.Timeout }>();
-const channelToken: string | null = null;
 function getChannelToken(prefix: string) {
 	if (channelTokens.has(prefix)) {
 		const { token } = channelTokens.get(prefix)!;
